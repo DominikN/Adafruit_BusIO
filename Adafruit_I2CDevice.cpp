@@ -39,7 +39,7 @@ bool Adafruit_I2CDevice::begin(bool addr_detect) {
  *    @brief  De-initialize device, turn off the Wire interface
  */
 void Adafruit_I2CDevice::end(void) {
-#ifndef ESP8266
+#ifndef ESP32
   // ESP8266 does not implement Wire::end()
   _wire->end();
 #endif
